@@ -81,4 +81,4 @@ molten_data <- melt(total, id=c("Subject", "Activity"))
 ans = dcast(molten_data, Subject + Activity ~ variable, mean)
 
 # write out the answer
-write.csv(ans, file = "UCI_HAR_tidy.csv")
+write.csv(ans, file = "UCI_HAR_tidy.csv", row.names = FALSE)
